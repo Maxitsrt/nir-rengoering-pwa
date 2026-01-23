@@ -67,7 +67,7 @@ function renderSection(sectionId) {
       <a class="btn" href="#/${sectionId}/${item.id}">
         <div>
           <div>${item.title}</div>
-          <small>Tryk for forklaring</small>
+          <!-- <small>Tryk for forklaring</small>
         </div>
         <div>›</div>
       </a>

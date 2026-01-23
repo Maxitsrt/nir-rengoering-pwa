@@ -37,11 +37,12 @@ export const DB = {
 
     rengoringsmetoder: {
       title: "Rengøringsmetoder",
-      intro: "Her kan du samle principper + konkrete metoder.",
-      items: [
-        { id: "ren-uren", title: "Ren → uren", text: "Skriv din forklaring her…", image: "" },
-        { id: "oppe-ned", title: "Oppe → ned", text: "Skriv din forklaring her…", image: "" },
-        { id: "mikrofiber", title: "Mikrofiber", text: "Kapillareffekt + statisk effekt… (tilføj dine noter)", image: "" },
+      intro: "En rengøringsmetode skal kunne løsne, fange og transportere urenheder væk. Efter udført rengøring skal overfladen være synligt ren",
+       items: [
+        { id: "vad", title: "Våd", text: "Våd rengøring med ren klud eller moppe og rent vand tilsat rengøringsmiddel, med mekanisk bearbejdning af overfladen og eftertørring med ren tør klud eller moppe.<br><br>Under våd gulvvask skal der bruges så meget vand at gulvet ikke selv når at tørre, for så sætter snavset sig fast igen.<br><br>Efter optørring af det beskidte vand skal gulvet være helt tørt inden for 2 minutter.", image: "" },
+        { id: "fugtig", title: "Fugtig", text: "Fugtig rengøring dvs overtørring med en forfugtig ren klud/engangsklud tilsat rengøringsmiddel med mekanisk bearbejdning af overfladen. Hvis der er behov for eftertørring er kluden for våd", image: "" },
+        { id: "tor", title: "Tør", text: "Tørmopning af gulve med tørmopper.", image: "" },
+        { id: "stovsugning", title: "Støvsugning", text: "Støvsugere, der anvendes på hospitaler, skal være udstyret med effektiv HEPA-filtrering.<br>Støvsugning skal helst undgås på hospitaler og må ikke bruges i patientrelateret rum unden aftale med ledelsen ", image: "" },
       ],
     },
 
@@ -65,3 +66,5 @@ export const DB = {
     },
   },
 };
+
+

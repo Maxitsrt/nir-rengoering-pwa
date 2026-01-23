@@ -27,15 +27,21 @@ body {
   border-bottom: 1px solid var(--border);
   background: rgba(255,255,255,.92);
   backdrop-filter: blur(8px);
+  position: sticky;
+  position: relative; /* 👈 tilføj denne */
 }
-
 .topbar h1{
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
   font-size: 16px;
   margin: 0;
   font-weight: 700;
-  flex: 1;
-  text-align: center;
 }
+
+
+
+.topbar .spacer {  flex: 1;}
 
 .back{
   display:inline-flex;
@@ -106,3 +112,6 @@ img{
   display: block;
   margin: 0 auto;
 }
+
+
+
