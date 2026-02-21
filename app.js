@@ -28,26 +28,31 @@ function renderHome() {
 
   const card = el(`
     <section class="card">
-      <p class="p note">Opslagsværk til rengøringspersonale – hurtigt overblik pr. emne.</p>
+      <p class="p note">Opslagsværk til rengøringspersonale - hurtigt overblik pr. emne.</p>
     </section>
   `);
 
   const list = el(`<section class="list"></section>`);
   for (const item of DB.home.items) {
     const a = el(`
-      <a class="btn" href="#/${item.id}">
-        <div>
-          <div>${item.icon ?? "📌"} ${item.title}</div>
-          <small>${item.subtitle ?? ""}</small>
-        </div>
-        <div>›</div>
-      </a>
-    `);
+  <a class="btn" href="#/${item.id}">
+    <div class="btn-left">
+      <img src="assets/icons/${item.icon}.svg" class="icon" alt="">
+      <div class="btn-text">
+        <div class="btn-title">${item.title}</div>
+        <small>${item.subtitle ?? ""}</small>
+      </div>
+    </div>
+    <div class="chevron">›</div>
+  </a>
+`);
+
     list.appendChild(a);
   }
 
   app.replaceChildren(card, list);
 }
+
 
 function renderSection(sectionId) {
   const section = DB.sections[sectionId];
@@ -64,14 +69,18 @@ function renderSection(sectionId) {
   const list = el(`<section class="list"></section>`);
   for (const item of section.items) {
     const a = el(`
-      <a class="btn" href="#/${sectionId}/${item.id}">
-        <div>
-          <div>${item.title}</div>
-          <!-- <small>Tryk for forklaring</small>
-        </div>
-        <div>›</div>
-      </a>
-    `);
+  <a class="btn" href="#/${sectionId}/${item.id}">
+    <div class="btn-left">
+      <div class="btn-title">
+        <img src="assets/icons/${item.icon}.svg" class="icon" alt="">
+        <span>${item.title}</span>
+      </div>
+      <small>${item.subtitle ?? ""}</small>
+    </div>
+    <div>›</div>
+  </a>
+`);
+
     list.appendChild(a);
   }
 

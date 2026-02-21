@@ -91,7 +91,15 @@ body {
   color: var(--text);
   font-weight: 600;
 }
+
 .btn small{ color: var(--muted); font-weight: 500; }
+.btn-left { 
+  display: flex;
+  align-items: center;   /* lodret centrering */
+  gap: 16px;
+}
+.btn-title { display: flex; align-items: center; gap: 10px; }
+.btn-icon { font-size: 22px; }
 
 .p{
   line-height: 1.45;
@@ -113,5 +121,12 @@ img{
   margin: 0 auto;
 }
 
+.icon {
+  width: 26px;
+  height: 26px;
+  flex-shrink: 0;
+  color: #2563eb;        /* tydelig blå */
+  opacity: 1;            /* IKKE lavere */
+}
 
 
