@@ -7,7 +7,7 @@ export const DB = {
       { id: "urenhedstyper", title: "Urenhedstyper", subtitle: "Pletter(Humanbiologisk materiale), Støv, Affald", icon: "dirty" },
       { id: "rengoringsmetoder", title: "Rengøringsmetoder", subtitle: "Våd, Fugtig, Tør, Støvsugning", icon: "mop" },
       { id: "profiler", title: "Hygiejne- og kvalitetsprofiler", subtitle: "NIR / INSTA 800 relation", icon: "control" },
-      { id: "håndhygiejne", title: "Håndhygiejne", subtitle: "NIR / INSTA 800 relation", icon: "clean_hands" },
+      { id: "handhygiejne", title: "Håndhygiejne", subtitle: "NIR / INSTA 800 relation", icon: "clean_hands" },
       { id: "insta800", title: "INSTA 800", subtitle: "Rengøring efter behov", icon: "measure" },
     ],
   },
@@ -49,20 +49,44 @@ export const DB = {
 
     profiler: {
       title: "Hygiejne- og kvalitetsprofiler",
-      intro:
-        "Hygiejneprofiler hører under NIR. Kvalitetsprofiler kan kobles til INSTA 800.",
+      intro: "Hygiejneprofiler anvendes i NIR og har fokus på smitteforebyggelse, patientnærhed og kontaktpunkter.<br><br>Kvalitetsprofiler anvendes i relation til INSTA 800 og beskriver niveauet for synlig renhed.<br><br>I dag prioriterer NIR primært hygiejne i patientnære områder, mens rengøring af øvrige områder planlægges ud fra lokale kvalitetsstandarder og risikovurdering.",
       items: [
-        { id: "hygiejneprofil-1", title: "Hygiejneprofil 1", text: "Skriv…", image: "", icon: "control" },
-        { id: "kvalitetsprofil-1", title: "Kvalitetsprofil 1", text: "Skriv…", image: "", icon: "control" },
+        { id: "hygiejneprofil-1", title: "Hygiejne/Kvalitets profil 5", text: "• Operationsstue<br>• Speciallaboratorium (har ofte højere niveau)<br>• Sterilproduktion/pakning/opbevaring", image: "", icon: "control" },
+        { id: "kvalitetsprofil-1", title: "Hygiejne/Kvalitets profil 4", text: "• Bad og/eller toilet, puslerum<br>• Fødestue<br>• Gang ved operation<br>• Kirurgisk håndvask/lægevask<br>• Køkken<br>• Laboratorier<br>• Prøvetagningsrum inkl. donortapning<br>• Rent depot, linneddepot, medicinrum, uniformsautomat<br>• Skyllerum (rent)<br>• Sengestue<br>• Svømmebassin inkl. birum<br>• Undersøgelses- og behandlingsrum inkl. træning/terapi<br>", image: "", icon: "control" },
+        { id: "kvalitetsprofil-1", title: "Hygiejne/Kvalitets profil 3", text: "• Gang på kliniske afsnit<br>• Kapel, 6-timersstue og morsrum, kølerum<br>• Kontorer i kliniske afsnit<br>• Omklædningsrum for personale og patienter<br>• Opholdsstue og legestue for patienter inkl. spisestue<br>• Personalerum i kliniske afsnit<br>• Rengøringsrum<br>• Samtalerum<br>• Sektionsstue<br>• Skyllerum (urent)<br>• Spisestue til personale<br>• Vagtværelser<br>• Venteværelse ved kliniske områder", image: "", icon: "control" },
       ],
     },
+
+handhygiejne: {
+  title: "Håndhygiejne",
+  intro: "Håndhygiejne er den vigtigste enkeltstående procedure til at afbryde smitteveje ved risiko for kontaktsmitte, herunder indirekte kontaktsmitte via berøring af overflader og fælles kontaktpunkter",
+  infoBoxes: [
+    {
+      title: "Hvornår skal du lave håndhygiejne?",
+      text: "Før rene opgaver og efter urene opgaver.<br><br>Før og efter brug af handsker<br><br>Ved synligt forurenede hænder<br><br>Før og efter kontakt med patienter<br><br>Kontakt med kontaktpunkter i patientnære områder<br><br>Ved synlig forurening af hænderne<br><br>Når du har mødt ind på arbejde<br><br>Ved skift af patientenhed<br><br>Efter hver toilet besøg<br><br>Efter hver klude skift",
+    },
+    {
+      title: "Hvordan",
+      text: "Brug hånddesinfektion på tørre rene hænder.<br><br>Vask med sæbe og vand ved synlig forurening eller fugtige hænder."
+    },
+    {
+      title: "Varighed",
+      text: "Med vand og sæbe 40-60 sekunder.<br><br>Kun håndsprit, Gnid hænderne grundigt, til de er helt tørre og husk det skal kun på hænderner og ikke på gulvet."
+    }
+  ],
+  items: [
+    // { id: "kort", title: "Kort forklaring", text: "", image: "", icon: "" },
+  ],
+},
 
     insta800: {
       title: "INSTA 800",
       intro:
-        "INSTA 800 beskriver rengøring efter behov/tilstand - men kontaktpunkter er altid faste.",
+        "DS/INSTA 800 er en fælles nordisk standard for måling og vurdering af rengøringskvalitet, der sikrer et ensartet sprog og dokumentation af rengøringsniveauet mellem kunde og leverandør.",
       items: [
-        { id: "kort", title: "Kort forklaring", text: "Skriv…", image: "", icon: "measure" },
+        { id: "hvad", title: "Hvad er INSTA 800?", text: "Fælles sprog: Minimerer misforståelser om, hvad 'rent' betyder, og reducerer risiko.<br><br>Objektive målinger: Rengøringen bedømmes ud fra visuel kontrol af objektgrupper (inventar, gulv, væg, loft).<br><br>Anvendelse: Kan bruges i alle bygninger (kontorer, skoler, hospitaler) uanset rengøringsmetode.", image: "", icon: "measure" },
+        { id: "kontrolleret", title: "Hvad bliver kontrolleret?", text: "Hvad er INSTA 800?", image: "", icon: "measure" },
+        { id: "vs", title: "INSTA 800 vs NIR", text: "Hvad er INSTA 800?", image: "", icon: "measure" },
       ],
     },
   },

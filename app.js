@@ -66,6 +66,14 @@ function renderSection(sectionId) {
     </section>
   `);
 
+  // Add infoBoxes rendering here
+  const infoBoxes = section.infoBoxes?.map(box => el(`
+    <section class="card info-box">
+      <h3>${box.title}</h3>
+      <p class="p">${box.text}</p>
+    </section>
+  `)) ?? [];
+
   const list = el(`<section class="list"></section>`);
   for (const item of section.items) {
     const a = el(`
@@ -84,7 +92,7 @@ function renderSection(sectionId) {
     list.appendChild(a);
   }
 
-  app.replaceChildren(intro, list);
+  app.replaceChildren(intro, ...infoBoxes, list);
 }
 
 function renderDetail(sectionId, itemId) {
