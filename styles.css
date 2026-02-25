@@ -20,28 +20,26 @@ body {
 .topbar{
   position: sticky;
   top: 0;
+  z-index: 10;
   display: flex;
   align-items: center;
-  gap: 12px;
+  justify-content: center;
+  gap: 8px;
   padding: 12px 14px;
   border-bottom: 1px solid var(--border);
   background: rgba(255,255,255,.92);
   backdrop-filter: blur(8px);
   position: sticky;
-  position: relative; /* 👈 tilføj denne */
 }
 .topbar h1{
-  position: absolute;
-  left: 50%;
-  transform: translateX(-50%);
+  position: static;
+  transform: none;
   font-size: 16px;
   margin: 0;
   font-weight: 700;
 }
 
-
-
-.topbar .spacer {  flex: 1;}
+.topbar .spacer { display: none; }
 
 .back{
   display:inline-flex;
@@ -127,6 +125,18 @@ img{
   flex-shrink: 0;
   color: #2563eb;        /* tydelig blå */
   opacity: 1;            /* IKKE lavere */
+}
+
+@media (max-width: 640px) {
+  .topbar {
+    padding: 14px 16px;
+    min-height: 56px;
+  }
+
+  .back {
+    width: 42px;
+    height: 42px;
+  }
 }
 
 

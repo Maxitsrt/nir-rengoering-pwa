@@ -8,6 +8,7 @@ export const DB = {
       { id: "rengoringsmetoder", title: "Rengøringsmetoder", subtitle: "Våd, Fugtig, Tør, Støvsugning", icon: "mop" },
       { id: "profiler", title: "Hygiejne- og kvalitetsprofiler", subtitle: "NIR / INSTA 800 relation", icon: "control" },
       { id: "handhygiejne", title: "Håndhygiejne", subtitle: "NIR / INSTA 800 relation", icon: "clean_hands" },
+      { id: "isolationsstuer", title: "Isolationsstuer", subtitle: "ISO Daglig rengøring, ISO Slutrengøring", icon: "clean_hands" },
       { id: "insta800", title: "INSTA 800", subtitle: "Rengøring efter behov", icon: "measure" },
     ],
   },
@@ -39,11 +40,11 @@ export const DB = {
     rengoringsmetoder: {
       title: "Rengøringsmetoder",
       intro: "En rengøringsmetode skal kunne løsne, fange og transportere urenheder væk. Efter udført rengøring skal overfladen være synligt ren",
-       items: [
+      items: [
         { id: "vad", title: "Våd", text: "Våd rengøring med ren klud eller moppe og rent vand tilsat rengøringsmiddel, med mekanisk bearbejdning af overfladen og eftertørring med ren tør klud eller moppe.<br><br>Under våd gulvvask skal der bruges så meget vand at gulvet ikke selv når at tørre, for så sætter snavset sig fast igen.<br><br>Efter optørring af det beskidte vand skal gulvet være helt tørt inden for 2 minutter.", image: "", icon: "mop" },
         { id: "fugtig", title: "Fugtig", text: "Fugtig rengøring dvs overtørring med en forfugtig ren klud/engangsklud tilsat rengøringsmiddel med mekanisk bearbejdning af overfladen. Hvis der er behov for eftertørring er kluden for våd", image: "", icon: "mop" },
         { id: "tor", title: "Tør", text: "Tørmopning af gulve med tørmopper.", image: "", icon: "mop" },
-        { id: "stovsugning", title: "Støvsugning", text: "Støvsugere, der anvendes på hospitaler, skal være udstyret med effektiv HEPA-filtrering.<br>Støvsugning skal helst undgås på hospitaler og må ikke bruges i patientrelateret rum unden aftale med ledelsen ", image: "", icon: "mop" },
+        { id: "stovsugning", title: "Støvsugning", text: "Støvsugere, der anvendes på hospitaler, skal være udstyret med effektiv HEPA-filtrering.<br>Støvsugning skal helst undgås på hospitaler og må ikke bruges i patientrelateret rum unden aftale med ledelsen ", image: "", icon: "vacuum-cleaner" },
       ],
     },
 
@@ -57,27 +58,37 @@ export const DB = {
       ],
     },
 
-handhygiejne: {
-  title: "Håndhygiejne",
-  intro: "Håndhygiejne er den vigtigste enkeltstående procedure til at afbryde smitteveje ved risiko for kontaktsmitte, herunder indirekte kontaktsmitte via berøring af overflader og fælles kontaktpunkter",
-  infoBoxes: [
-    {
-      title: "Hvornår skal du lave håndhygiejne?",
-      text: "Før rene opgaver og efter urene opgaver.<br><br>Før og efter brug af handsker<br><br>Ved synligt forurenede hænder<br><br>Før og efter kontakt med patienter<br><br>Kontakt med kontaktpunkter i patientnære områder<br><br>Ved synlig forurening af hænderne<br><br>Når du har mødt ind på arbejde<br><br>Ved skift af patientenhed<br><br>Efter hver toilet besøg<br><br>Efter hver klude skift",
+    handhygiejne: {
+      title: "Håndhygiejne",
+      intro: "Håndhygiejne er den vigtigste enkeltstående procedure til at afbryde smitteveje ved risiko for kontaktsmitte, herunder indirekte kontaktsmitte via berøring af overflader og fælles kontaktpunkter",
+      infoBoxes: [
+        {
+          title: "Hvornår skal du lave håndhygiejne?",
+          text: "Før rene opgaver og efter urene opgaver.<br><br>Før og efter brug af handsker<br><br>Ved synligt forurenede hænder<br><br>Før og efter kontakt med patienter<br><br>Kontakt med kontaktpunkter i patientnære områder<br><br>Ved synlig forurening af hænderne<br><br>Når du har mødt ind på arbejde<br><br>Ved skift af patientenhed<br><br>Efter hver toilet besøg<br><br>Efter hver klude skift",
+        },
+        {
+          title: "Hvordan",
+          text: "Brug hånddesinfektion på tørre rene hænder.<br><br>Vask med sæbe og vand ved synlig forurening eller fugtige hænder."
+        },
+        {
+          title: "Varighed",
+          text: "Med vand og sæbe 40-60 sekunder.<br><br>Kun håndsprit, Gnid hænderne grundigt, til de er helt tørre og husk det skal kun på hænderner og ikke på gulvet."
+        }
+      ],
+      items: [
+        // { id: "kort", title: "Kort forklaring", text: "", image: "", icon: "" },
+      ],
     },
-    {
-      title: "Hvordan",
-      text: "Brug hånddesinfektion på tørre rene hænder.<br><br>Vask med sæbe og vand ved synlig forurening eller fugtige hænder."
+
+    isolationsstuer: {
+      title: "Isolationsstuer",
+      intro:
+        "Patienter kan være isoleret for at beskytte omgivelserne mod smitte (kildeisolation) eller for at beskytte patienten mod smitterisiko fra omgivelserne (beskyttelsesisolation).<br><br>Man beskytter medpatienter og personale mod smitte i tilfælde, hvor patienten har en smitsom sygdom og/eller hvor patienten er inficeret eller koloniseret med resistente mikroorganismer.",
+      items: [
+        { id: "isodaglig", title: "ISO Daglig rengøring", text: "• Rengøringspersonalet informeres om, hvilken isolationsrengøring, der skal foretages, herunder desinfektion.<br><br>• Der bruges de samme personlige værnemidler som sundhedspersonalet anvender.<br><br>• Værnemidler påtages i rent område.<br><br>• Rengøringsvogn placeres uden for isolationsstuen.<br><br>• Kun nødvendigt udstyr og klude/rengøringsmidler medtages. Klude pakkes i ren plastpose, der placeres i rent område på isolationsstuen, fx et rent procedurebord.<br><br>• Daglig rengøring af kontaktpunkter og overflader.<br><br>• Efterfulgt af desinfektion af kontaktpunkter med egnet desinfektionsmiddel.<br><br>• Præfabrikerede éngangsklude samt én gangs-desinfektionsklude er en metode, der kan anvendes i stedet for flergangsklude.<br><br>• Rengøring af gulv.<br><br>• Rengøringsudstyr anvendt på stuen rengøres og desinficeres inden stuen forlades.<br><br>• Værnemidler aftages i urent område, når stuen forlades.<br><br>• Håndhygiejne udføres, når isolationsstuen forlades. Hånddesinfektion er ikke altid tilstrækkeligt, og derfor anbefales håndvask efterfuldt af hånddesinfektion ved tilfælde af mavetarminfektion, fx med norovirus og C. difficile.", image: "", icon: "measure" },
+        { id: "isoslut", title: "ISO Slutrengøring", text: "Hvad er INSTA 800?", image: "", icon: "measure" },
+      ],
     },
-    {
-      title: "Varighed",
-      text: "Med vand og sæbe 40-60 sekunder.<br><br>Kun håndsprit, Gnid hænderne grundigt, til de er helt tørre og husk det skal kun på hænderner og ikke på gulvet."
-    }
-  ],
-  items: [
-    // { id: "kort", title: "Kort forklaring", text: "", image: "", icon: "" },
-  ],
-},
 
     insta800: {
       title: "INSTA 800",
