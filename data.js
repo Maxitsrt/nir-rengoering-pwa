@@ -10,6 +10,8 @@ export const DB = {
       { id: "handhygiejne", title: "Håndhygiejne", subtitle: "NIR / INSTA 800 relation", icon: "clean_hands" },
       { id: "isolationsstuer", title: "Isolationsstuer", subtitle: "ISO Daglig rengøring, ISO Slutrengøring", icon: "clean_hands" },
       { id: "insta800", title: "INSTA 800", subtitle: "Rengøring efter behov", icon: "measure" },
+      { id: "quiz", title: "Quiz", subtitle: "Test din viden om rengøring på hospitaler", icon: "quiz" },   
+      
     ],
   },
 
@@ -94,6 +96,17 @@ export const DB = {
       title: "INSTA 800",
       intro:
         "DS/INSTA 800 er en fælles nordisk standard for måling og vurdering af rengøringskvalitet, der sikrer et ensartet sprog og dokumentation af rengøringsniveauet mellem kunde og leverandør.",
+      items: [
+        { id: "hvad", title: "Hvad er INSTA 800?", text: "Fælles sprog: Minimerer misforståelser om, hvad 'rent' betyder, og reducerer risiko.<br><br>Objektive målinger: Rengøringen bedømmes ud fra visuel kontrol af objektgrupper (inventar, gulv, væg, loft).<br><br>Anvendelse: Kan bruges i alle bygninger (kontorer, skoler, hospitaler) uanset rengøringsmetode.", image: "", icon: "measure" },
+        { id: "kontrolleret", title: "Hvad bliver kontrolleret?", text: "Hvad er INSTA 800?", image: "", icon: "measure" },
+        { id: "vs", title: "INSTA 800 vs NIR", text: "Hvad er INSTA 800?", image: "", icon: "measure" },
+      ],
+    },
+
+    quiz: {
+      title: "Quiz",
+      intro:
+        "Tag en Quiz og find ud af hvor meget du ved om rengøreing på et hospital",
       items: [
         { id: "hvad", title: "Hvad er INSTA 800?", text: "Fælles sprog: Minimerer misforståelser om, hvad 'rent' betyder, og reducerer risiko.<br><br>Objektive målinger: Rengøringen bedømmes ud fra visuel kontrol af objektgrupper (inventar, gulv, væg, loft).<br><br>Anvendelse: Kan bruges i alle bygninger (kontorer, skoler, hospitaler) uanset rengøringsmetode.", image: "", icon: "measure" },
         { id: "kontrolleret", title: "Hvad bliver kontrolleret?", text: "Hvad er INSTA 800?", image: "", icon: "measure" },
